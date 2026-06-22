@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ascent-experiment:sapphire_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ascent-experiment:sapphire"
+  }
+}
