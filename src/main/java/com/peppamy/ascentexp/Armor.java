@@ -17,6 +17,64 @@ import java.util.function.Supplier;
 
 public class Armor {
     public static void initialize() {};
+    public static final RegistryEntry<ArmorMaterial> SAPPHIRE = registerMaterial("sapphire",
+        // Defense (protection) point values for each armor piece.
+        Map.of(
+            ArmorItem.Type.HELMET, 3,
+            ArmorItem.Type.CHESTPLATE, 7,
+            ArmorItem.Type.LEGGINGS, 5,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+        13,
+        // The sound played when the armor is equipped.
+        SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+        // The ingredient(s) used to repair the armor.
+        () -> Ingredient.ofItems(AscentExperimentItems.SAPPHIRE),
+        1.5F,
+        0.0F,
+        // Guidite is NOT dyeable, so we will pass false.
+        false
+    );
+    public static final RegistryEntry<ArmorMaterial> BLOOD_RUTILE = registerMaterial("blood_rutile",
+        // Defense (protection) point values for each armor piece.
+        Map.of(
+            ArmorItem.Type.HELMET, 3,
+            ArmorItem.Type.CHESTPLATE, 6,
+            ArmorItem.Type.LEGGINGS, 5,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+        16,
+        // The sound played when the armor is equipped.
+        SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+        // The ingredient(s) used to repair the armor.
+        () -> Ingredient.ofItems(AscentExperimentItems.BLOOD_RUTILE),
+        2.0F,
+        0.05F,
+        // Guidite is NOT dyeable, so we will pass false.
+        false
+    );
+    public static final RegistryEntry<ArmorMaterial> CHARTIUM = registerMaterial("chartium",
+        // Defense (protection) point values for each armor piece.
+        Map.of(
+            ArmorItem.Type.HELMET, 2,
+            ArmorItem.Type.CHESTPLATE, 6,
+            ArmorItem.Type.LEGGINGS, 5,
+            ArmorItem.Type.BOOTS, 2
+        ),
+        // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+        5,
+        // The sound played when the armor is equipped.
+        SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
+        // The ingredient(s) used to repair the armor.
+        () -> Ingredient.ofItems(AscentExperimentItems.CHARTIUM_INGOT),
+        1.0F,
+        0.15F,
+        // Guidite is NOT dyeable, so we will pass false.
+        false
+    );
+
 
     public static RegistryEntry<ArmorMaterial> registerMaterial(String id, Map<ArmorItem.Type, Integer> defensePoints, int enchantability, RegistryEntry<SoundEvent> equipSound, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
         // Get the supported layers for the armor material
@@ -28,32 +86,11 @@ public class Armor {
             new ArmorMaterial.Layer(Identifier.of(AscentExperiment.MOD_ID, id), "", dyeable)
         );
 
-        ArmorMaterial sapphire = new ArmorMaterial(defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance);
+        ArmorMaterial material = new ArmorMaterial(defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance);
         // Register the material within the ArmorMaterials registry.
-        sapphire = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(AscentExperiment.MOD_ID, id), sapphire);
+        material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(AscentExperiment.MOD_ID, id), material);
 
         // The majority of the time, you'll want the RegistryEntry of the material - especially for the ArmorItem constructor.
-        return RegistryEntry.of(sapphire);
+        return RegistryEntry.of(material);
     }
-
-    public static final RegistryEntry<ArmorMaterial> SAPPHIRE = registerMaterial("sapphire",
-        // Defense (protection) point values for each armor piece.
-        Map.of(
-            ArmorItem.Type.HELMET, 3,
-            ArmorItem.Type.CHESTPLATE, 7,
-            ArmorItem.Type.LEGGINGS, 5,
-            ArmorItem.Type.BOOTS, 2
-        ),
-        // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
-        5,
-        // The sound played when the armor is equipped.
-        SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
-        // The ingredient(s) used to repair the armor.
-        () -> Ingredient.ofItems(AscentExperimentItems.SAPPHIRE),
-        1.5F,
-        0.0F,
-        // Guidite is NOT dyeable, so we will pass false.
-        false
-    );
-
 }

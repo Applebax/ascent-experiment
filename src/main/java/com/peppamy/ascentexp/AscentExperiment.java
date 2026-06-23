@@ -22,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static net.minecraft.registry.tag.BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
+import static net.minecraft.registry.tag.BlockTags.INCORRECT_FOR_IRON_TOOL;
 
 public class AscentExperiment implements ModInitializer {
 	public static final String MOD_ID = "ascent-experiment";
@@ -32,6 +33,8 @@ public class AscentExperiment implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final TagKey<Item> REPAIRS_SAPPHIRE_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(MOD_ID, "repairs_sapphire_armor"));
+	public static final TagKey<Item> REPAIRS_RUTILE_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(MOD_ID, "repairs_rutile_armor"));
+	public static final TagKey<Item> REPAIRS_CHARTIUM_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(MOD_ID, "repairs_chartium_armor"));
 
 	public static class SapphireMaterial implements ToolMaterial {
 
@@ -67,6 +70,75 @@ public class AscentExperiment implements ModInitializer {
 			return Ingredient.fromTag(REPAIRS_SAPPHIRE_ARMOR);
 		}
 	}
+	public static class BloodRutileMaterial implements ToolMaterial {
+
+		public static final BloodRutileMaterial INSTANCE = new BloodRutileMaterial();
+
+		@Override
+		public int getDurability() {
+			return 415;
+		}
+
+		@Override
+		public float getMiningSpeedMultiplier() {
+			return 6.5F;
+		}
+
+		@Override
+		public float getAttackDamage() {
+			return 2.0F;
+		}
+
+		@Override
+		public TagKey<Block> getInverseTag() {
+			return INCORRECT_FOR_IRON_TOOL;
+		}
+
+		@Override
+		public int getEnchantability() {
+			return 18;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.fromTag(REPAIRS_RUTILE_ARMOR);
+		}
+	}
+	public static class ChartiumMaterial implements ToolMaterial {
+
+		public static final ChartiumMaterial INSTANCE = new ChartiumMaterial();
+
+		@Override
+		public int getDurability() {
+			return 521;
+		}
+
+		@Override
+		public float getMiningSpeedMultiplier() {
+			return 7.5F;
+		}
+
+		@Override
+		public float getAttackDamage() {
+			return 2.0F;
+		}
+
+		@Override
+		public TagKey<Block> getInverseTag() {
+			return INCORRECT_FOR_DIAMOND_TOOL;
+		}
+
+		@Override
+		public int getEnchantability() {
+			return 10;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.fromTag(REPAIRS_CHARTIUM_ARMOR);
+		}
+	}
+
 
 	public static final RegistryKey<PlacedFeature> ORE_SAPPHIRE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_sapphire"));
 

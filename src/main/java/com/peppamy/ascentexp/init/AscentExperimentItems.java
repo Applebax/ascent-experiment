@@ -38,11 +38,31 @@ public class AscentExperimentItems {
     public static final Item SAPPHIRE_LEGGINGS = register("sapphire_leggings", new ArmorItem(Armor.SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(405) ));
     public static final Item SAPPHIRE_BOOTS = register("sapphire_boots", new ArmorItem(Armor.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(351) ));
 
+    public static final Item MYSTICK = register("mystick", new Item(new Item.Settings()));
+
     public static final Item BLOOD_RUTILE = register("blood_rutile", new Item(new Item.Settings()));
+    public static final Item BLOOD_RUTILE_SWORD = register("blood_rutile_sword", new SwordItem(AscentExperiment.BloodRutileMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(SwordItem.createAttributeModifiers(AscentExperiment.BloodRutileMaterial.INSTANCE, 3, -2.4F))));
+    public static final Item BLOOD_RUTILE_PICKAXE = register("blood_rutile_pickaxe", new PickaxeItem(AscentExperiment.BloodRutileMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(PickaxeItem.createAttributeModifiers(AscentExperiment.BloodRutileMaterial.INSTANCE, 1.0F, -2.8F))));
+    public static final Item BLOOD_RUTILE_AXE = register("blood_rutile_axe", new AxeItem(AscentExperiment.BloodRutileMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(AxeItem.createAttributeModifiers(AscentExperiment.BloodRutileMaterial.INSTANCE, 5.0F, -3.0F))));
+    public static final Item BLOOD_RUTILE_SHOVEL = register("blood_rutile_shovel", new ShovelItem(AscentExperiment.BloodRutileMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(ShovelItem.createAttributeModifiers(AscentExperiment.BloodRutileMaterial.INSTANCE, 1.5F, -3.0F))));
+    public static final Item BLOOD_RUTILE_HOE = register("blood_rutile_hoe", new HoeItem(AscentExperiment.BloodRutileMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(HoeItem.createAttributeModifiers(AscentExperiment.BloodRutileMaterial.INSTANCE, -3.0F, 0.0F))));
+    public static final Item BLOOD_RUTILE_HELMET = register("blood_rutile_helmet", new ArmorItem(Armor.BLOOD_RUTILE, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(198) ));
+    public static final Item BLOOD_RUTILE_CHESTPLATE = register("blood_rutile_chestplate", new ArmorItem(Armor.BLOOD_RUTILE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(288) ));
+    public static final Item BLOOD_RUTILE_LEGGINGS = register("blood_rutile_leggings", new ArmorItem(Armor.BLOOD_RUTILE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(270) ));
+    public static final Item BLOOD_RUTILE_BOOTS = register("blood_rutile_boots", new ArmorItem(Armor.BLOOD_RUTILE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(234) ));
 
     public static final Item RAW_CHARTIUM = register("raw_chartium", new Item(new Item.Settings()));
     public static final Item CHARTIUM_INGOT = register("chartium_ingot", new Item(new Item.Settings()));
     public static final Item CHARTIUM_NUGGET = register("chartium_nugget", new Item(new Item.Settings()));
+    public static final Item CHARTIUM_SWORD = register("chartium_sword", new SwordItem(AscentExperiment.ChartiumMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(SwordItem.createAttributeModifiers(AscentExperiment.ChartiumMaterial.INSTANCE, 3, -2.4F))));
+    public static final Item CHARTIUM_PICKAXE = register("chartium_pickaxe", new PickaxeItem(AscentExperiment.ChartiumMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(PickaxeItem.createAttributeModifiers(AscentExperiment.ChartiumMaterial.INSTANCE, 1.0F, -2.8F))));
+    public static final Item CHARTIUM_AXE = register("chartium_axe", new AxeItem(AscentExperiment.ChartiumMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(AxeItem.createAttributeModifiers(AscentExperiment.ChartiumMaterial.INSTANCE, 5.0F, -3.0F))));
+    public static final Item CHARTIUM_SHOVEL = register("chartium_shovel", new ShovelItem(AscentExperiment.ChartiumMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(ShovelItem.createAttributeModifiers(AscentExperiment.ChartiumMaterial.INSTANCE, 1.5F, -3.0F))));
+    public static final Item CHARTIUM_HOE = register("chartium_hoe", new HoeItem(AscentExperiment.ChartiumMaterial.INSTANCE, (new Item.Settings()).attributeModifiers(HoeItem.createAttributeModifiers(AscentExperiment.ChartiumMaterial.INSTANCE, -3.0F, 0.0F))));
+    public static final Item CHARTIUM_HELMET = register("chartium_helmet", new ArmorItem(Armor.CHARTIUM, ArmorItem.Type.HELMET, new Item.Settings().maxDamage(253) ));
+    public static final Item CHARTIUM_CHESTPLATE = register("chartium_chestplate", new ArmorItem(Armor.CHARTIUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxDamage(368) ));
+    public static final Item CHARTIUM_LEGGINGS = register("chartium_leggings", new ArmorItem(Armor.CHARTIUM, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(345) ));
+    public static final Item CHARTIUM_BOOTS = register("chartium_boots", new ArmorItem(Armor.CHARTIUM, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(299) ));
 
     public static final Item COMPASSION_FRUIT = register("compassion_fruit", COMPASSION_FOOD);
 

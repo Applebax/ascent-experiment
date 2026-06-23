@@ -37,6 +37,7 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(AscentExperimentItems.COMPASSION_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.HEART_BADGE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.MYSTICK, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_HELMET, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_CHESTPLATE, Models.GENERATED);
@@ -48,8 +49,26 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_HOE, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_HELMET, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE_HOE, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.RAW_CHARTIUM, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.CHARTIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.CHARTIUM_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_HELMET, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_LEGGINGS, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_HOE, Models.HANDHELD);
     }
 }
