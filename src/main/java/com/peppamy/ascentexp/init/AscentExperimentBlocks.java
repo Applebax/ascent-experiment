@@ -3,6 +3,7 @@ package com.peppamy.ascentexp.init;
 import com.peppamy.ascentexp.AscentExperiment;
 import com.peppamy.ascentexp.block.AeremoneBlock;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -40,7 +41,7 @@ public class AscentExperimentBlocks {
             .requiresTool()
             .strength(3.0F, 3.0F)
     ), true);
-    public static final Block DEEPSLATE_SAPPHIRE_ORE = register("deepslate_sapphire_ore", new ExperienceDroppingBlock(UniformIntProvider.create(5, 13), AbstractBlock.Settings.create()
+    public static final Block DEEPSLATE_SAPPHIRE_ORE = register("deepslate_sapphire_ore", new ExperienceDroppingBlock(UniformIntProvider.create(5, 10), AbstractBlock.Settings.create()
             .mapColor(MapColor.LAPIS_BLUE)
             .sounds(BlockSoundGroup.DEEPSLATE)
             .requiresTool()
@@ -51,6 +52,57 @@ public class AscentExperimentBlocks {
             .requiresTool()
             .strength(5.0F, 6.0F)
             .sounds(BlockSoundGroup.METAL)
+    ), true);
+
+    public static final Block BLACKSTONE_RUTILE_ORE = register("blackstone_rutile_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 8), AbstractBlock.Settings.create()
+        .mapColor(MapColor.BLACK)
+        .sounds(BlockSoundGroup.STONE)
+        .requiresTool()
+        .strength(3.5F, 6.5F)
+        .instrument(NoteBlockInstrument.BASEDRUM)
+    ), true);
+    public static final Block BASALT_RUTILE_ORE = register("basalt_rutile_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 8), AbstractBlock.Settings.create()
+        .mapColor(MapColor.BLACK)
+        .instrument(NoteBlockInstrument.BASEDRUM)
+        .requiresTool()
+        .strength(3.5F, 4.5F)
+        .sounds(BlockSoundGroup.BASALT)
+    ), true);
+    public static final Block BLOOD_RUTILE_BLOCK = register("blood_rutile_block", new Block(AbstractBlock.Settings.create()
+        .mapColor(MapColor.DARK_RED)
+        .requiresTool()
+        .strength(5.0F, 6.0F)
+        .sounds(BlockSoundGroup.METAL)
+    ), true);
+    public static final Block ASTER_STONE = register("aster_stone", new Block(AbstractBlock.Settings.create()
+        .mapColor(MapColor.TERRACOTTA_BLACK)
+        .sounds(BlockSoundGroup.STONE)
+        .requiresTool()
+        .strength(5.0F, 5.0F)
+    ), true);
+    public static final Block CHARTIUM_ORE = register("chartium_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 8), AbstractBlock.Settings.create()
+        .mapColor(MapColor.TERRACOTTA_BLACK)
+        .sounds(BlockSoundGroup.STONE)
+        .requiresTool()
+        .strength(6.0F, 5.0F)
+    ), true);
+    public static final Block CHARTIUM_BLOCK = register("chartium_block", new Block(AbstractBlock.Settings.create()
+        .mapColor(MapColor.LIME)
+        .requiresTool()
+        .strength(5.0F, 6.0F)
+        .sounds(BlockSoundGroup.METAL)
+    ), true);
+    public static final Block CHARTIUM_BRICKS = register("chartium_bricks", new Block(AbstractBlock.Settings.create()
+        .mapColor(MapColor.LIME)
+        .requiresTool()
+        .strength(5.0F, 6.0F)
+        .sounds(BlockSoundGroup.METAL)
+    ), true);
+    public static final Block RAW_CHARTIUM_BLOCK = register("raw_chartium_block", new Block(AbstractBlock.Settings.create()
+        .mapColor(MapColor.LIME)
+        .requiresTool()
+        .strength(5.0F, 6.0F)
+        .instrument(NoteBlockInstrument.BASEDRUM)
     ), true);
 
     public static final Block CHARTIUM_TORCH = register("chartium_torch", new TorchBlock(AscentExperimentParticleTypes.CHARTIUM_FLAME, AbstractBlock.Settings.create().noCollision().breakInstantly().luminance((state) -> 14).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY)), false);

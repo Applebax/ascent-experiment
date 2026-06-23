@@ -21,6 +21,15 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.SAPPHIRE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.DEEPSLATE_SAPPHIRE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.SAPPHIRE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BLACKSTONE_RUTILE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BASALT_RUTILE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BLOOD_RUTILE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.ASTER_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BRICKS);
+
         blockStateModelGenerator.registerTorch(AscentExperimentBlocks.CHARTIUM_TORCH, AscentExperimentBlocks.CHARTIUM_WALL_TORCH);
     }
 
@@ -38,5 +47,9 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_AXE, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(AscentExperimentItems.BLOOD_RUTILE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.RAW_CHARTIUM, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.CHARTIUM_NUGGET, Models.GENERATED);
     }
 }

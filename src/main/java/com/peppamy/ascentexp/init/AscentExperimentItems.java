@@ -38,6 +38,12 @@ public class AscentExperimentItems {
     public static final Item SAPPHIRE_LEGGINGS = register("sapphire_leggings", new ArmorItem(Armor.SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxDamage(405) ));
     public static final Item SAPPHIRE_BOOTS = register("sapphire_boots", new ArmorItem(Armor.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxDamage(351) ));
 
+    public static final Item BLOOD_RUTILE = register("blood_rutile", new Item(new Item.Settings()));
+
+    public static final Item RAW_CHARTIUM = register("raw_chartium", new Item(new Item.Settings()));
+    public static final Item CHARTIUM_INGOT = register("chartium_ingot", new Item(new Item.Settings()));
+    public static final Item CHARTIUM_NUGGET = register("chartium_nugget", new Item(new Item.Settings()));
+
     public static final Item COMPASSION_FRUIT = register("compassion_fruit", COMPASSION_FOOD);
 
     public static final Item AEREMONE_BULB = register("aeremone_bulb", new AliasedBlockItem(AscentExperimentBlocks.AEREMONE, new Item.Settings()));

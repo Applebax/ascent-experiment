@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ascent-experiment:block/blackstone_rutile_ore"
+  }
+}

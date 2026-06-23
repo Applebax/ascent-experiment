@@ -15,5 +15,17 @@
   "item.ascent-experiment.sapphire_chestplate": "Sapphire Chestplate",
   "item.ascent-experiment.sapphire_leggings": "Sapphire Leggings",
   "item.ascent-experiment.sapphire_boots": "Sapphire Boots",
+  "item.ascent-experiment.blood_rutile": "Blood Rutile",
+  "block.ascent-experiment.blackstone_rutile_ore": "Rutile Ore",
+  "block.ascent-experiment.basalt_rutile_ore": "Basalt Rutile Ore",
+  "block.ascent-experiment.blood_rutile_block": "Block of Blood Rutile",
+  "item.ascent-experiment.raw_chartium": "Raw Chartium",
+  "item.ascent-experiment.chartium_ingot": "Chartium Ingot",
+  "item.ascent-experiment.chartium_nugget": "Chartium Nugget",
+  "block.ascent-experiment.aster_stone": "Aster Stone",
+  "block.ascent-experiment.chartium_ore": "Chartium Ore",
+  "block.ascent-experiment.raw_chartium_block": "Block of Raw Chartium",
+  "block.ascent-experiment.chartium_block": "Block of Chartium",
+  "block.ascent-experiment.chartium_bricks": "Chartium Bricks",
   "item.ascent-experiment.compassion_fruit": "Compassion Fruit"
 }
