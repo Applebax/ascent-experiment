@@ -12,5 +12,6 @@ public class AscentExperimentDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(AscentExperimentBlockLootTableGenerator::new);
         FabricTagProvider.BlockTagProvider blockTagProvider = pack.addProvider(AscentExperimentTagGenerators.AscentExperimentBlockTagGenerator::new);
         pack.addProvider((fabricDataOutput, completableFuture) -> new AscentExperimentTagGenerators.AscentExperimentItemTagGenerator(fabricDataOutput, completableFuture, blockTagProvider));
+        pack.addProvider(AscentExperimentRecipeGenerator::new);
     }
 }
