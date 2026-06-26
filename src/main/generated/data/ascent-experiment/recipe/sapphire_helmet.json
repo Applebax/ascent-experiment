@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:sapphire"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:sapphire_helmet"
+  }
+}

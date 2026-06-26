@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:blood_rutile"
+    },
+    "/": {
+      "item": "ascent-experiment:mystick"
+    }
+  },
+  "pattern": [
+    "##",
+    " /",
+    " /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:blood_rutile_hoe"
+  }
+}

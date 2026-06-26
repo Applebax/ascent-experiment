@@ -27,5 +27,7 @@ public class AscentExperimentBlockLootTableGenerator extends FabricBlockLootTabl
         this.addDrop(AscentExperimentBlocks.BLACKSTONE_RUTILE_ORE, block -> this.oreDrops(block, AscentExperimentItems.BLOOD_RUTILE));
         this.addDrop(AscentExperimentBlocks.BASALT_RUTILE_ORE, block -> this.oreDrops(block, AscentExperimentItems.BLOOD_RUTILE));
         this.addDrop(AscentExperimentBlocks.CHARTIUM_ORE, block -> this.oreDrops(block, AscentExperimentItems.RAW_CHARTIUM));
+        this.addDrop(AscentExperimentBlocks.COMPASSION_PLANT, block -> this.drops(block, AscentExperimentItems.COMPASSION_FRUIT));
+        this.addDrop(AscentExperimentBlocks.FRUITING_COMPASSION_LEAVES, block -> this.drops(block, AscentExperimentItems.COMPASSION_FRUIT));
     }
 }

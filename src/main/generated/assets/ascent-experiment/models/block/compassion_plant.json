@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "ascent-experiment:block/compassion_plant"
+  }
+}

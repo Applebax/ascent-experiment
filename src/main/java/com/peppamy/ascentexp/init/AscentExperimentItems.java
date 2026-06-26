@@ -97,6 +97,8 @@ public class AscentExperimentItems {
 
     public static final Item COMPASSION_FRUIT = register("compassion_fruit", COMPASSION_FOOD);
 
+    public static final Item COMPASSION_BOTTLE = register("compassion_bottle", new Item(new Item.Settings()));
+
     public static final Item AEREMONE_BULB = register("aeremone_bulb", new AliasedBlockItem(AscentExperimentBlocks.AEREMONE, new Item.Settings().food(AscentExperimentItems.AERO_FOOD)));
 
     public static final Item CHARTIUM_TORCH_ITEM = register("chartium_torch", new VerticallyAttachableBlockItem(AscentExperimentBlocks.CHARTIUM_TORCH, AscentExperimentBlocks.CHARTIUM_WALL_TORCH, new Item.Settings(), Direction.DOWN));

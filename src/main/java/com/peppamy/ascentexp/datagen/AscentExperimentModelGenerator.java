@@ -1,5 +1,6 @@
 package com.peppamy.ascentexp.datagen;
 
+import com.peppamy.ascentexp.AscentExperiment;
 import com.peppamy.ascentexp.init.AscentExperimentBlocks;
 import com.peppamy.ascentexp.init.AscentExperimentItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -7,6 +8,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TextureMap;
+import org.jetbrains.annotations.ApiStatus;
 
 public class AscentExperimentModelGenerator extends FabricModelProvider {
 
@@ -28,6 +31,7 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BRICKS);
 
+        blockStateModelGenerator.registerTintableCross(AscentExperimentBlocks.COMPASSION_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.COMPASSION_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.FRUITING_COMPASSION_LEAVES);
 
@@ -37,6 +41,7 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(AscentExperimentItems.COMPASSION_FRUIT, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.COMPASSION_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.HEART_BADGE, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.MYSTICK, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.SAPPHIRE, Models.GENERATED);

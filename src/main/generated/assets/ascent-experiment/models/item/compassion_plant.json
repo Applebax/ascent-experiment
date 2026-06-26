@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ascent-experiment:block/compassion_plant"
+  }
+}

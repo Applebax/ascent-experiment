@@ -2,6 +2,7 @@ package com.peppamy.ascentexp.init;
 
 import com.peppamy.ascentexp.AscentExperiment;
 import com.peppamy.ascentexp.block.AeremoneBlock;
+import com.peppamy.ascentexp.block.CompassionPlantBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -24,15 +25,24 @@ import static net.minecraft.block.Blocks.createLeavesBlock;
 
 
 public class AscentExperimentBlocks {
-    public static final Block COMPASSION_PLANT = register("compassion_plant", new SaplingBlock(
-        SaplingGenerator.AZALEA,
+    public static final Block COMPASSION_PLANT = register("compassion_plant", new CompassionPlantBlock(
         AbstractBlock.Settings.create()
-                              .mapColor(MapColor.DARK_GREEN)
-                              .noCollision()
-                              .ticksRandomly()
-                              .breakInstantly()
-                              .sounds(BlockSoundGroup.GRASS)
-                              .pistonBehavior(PistonBehavior.DESTROY)
+            .mapColor(MapColor.DARK_GREEN)
+            .noCollision()
+            .ticksRandomly()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.GRASS)
+            .pistonBehavior(PistonBehavior.DESTROY)
+    ), true);
+
+    public static final Block COMPASSION_SPROUT = register("compassion_sprout", new SaplingBlock(SaplingGenerator.AZALEA,
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.DARK_GREEN)
+            .noCollision()
+            .ticksRandomly()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.GRASS)
+            .pistonBehavior(PistonBehavior.DESTROY)
     ), false);
 
     public static final Block AEREMONE = register("aeremone", new AeremoneBlock(

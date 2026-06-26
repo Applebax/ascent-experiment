@@ -7,16 +7,29 @@ import com.peppamy.ascentexp.item.ArmorMaterials;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
+import net.minecraft.loot.condition.SurvivesExplosionLootCondition;
+import net.minecraft.loot.condition.TableBonusLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.function.SetItemLootFunction;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.BuiltinRegistries;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
@@ -146,6 +159,7 @@ public class AscentExperiment implements ModInitializer {
 	public static final RegistryKey<PlacedFeature> ORE_SAPPHIRE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, id("ore_sapphire"));
 	public static final RegistryKey<PlacedFeature> ORE_BLACKSTONE_RUTILE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_blackstone_rutile"));
 	public static final RegistryKey<PlacedFeature> ORE_BASALT_RUTILE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_basalt_rutile"));
+//	public static final RegistryKey<PlacedFeature> WILD_COMPASSION_PLANT_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "wild_compassion_plant"));
 
 	@Override
 	public void onInitialize() {
@@ -160,7 +174,16 @@ public class AscentExperiment implements ModInitializer {
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), GenerationStep.Feature.UNDERGROUND_ORES, ORE_SAPPHIRE_PLACED_FEATURE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_BLACKSTONE_RUTILE_PLACED_FEATURE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_BASALT_RUTILE_PLACED_FEATURE);
-		ArmorMaterials.initialize();
+//		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, WILD_COMPASSION_PLANT_FEATURE);
+//		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES), GenerationStep.Feature.TOP_LAYER_MODIFICATION, WILD_COMPASSION_PLANT_FEATURE);
+
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.NETHER_BRIDGE_CHEST)||(key.equals(LootTables.BASTION_HOGLIN_STABLE_CHEST)||(key.equals(LootTables.BASTION_OTHER_CHEST)))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.MYSTICK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 9)))));
+		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.BASTION_TREASURE_CHEST)||(key.equals(LootTables.BASTION_OTHER_CHEST))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.MYSTICK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 3)))));
+		});
+				ArmorMaterials.initialize();
 	}
 
 	public static Identifier id(String path)

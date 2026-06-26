@@ -1,11 +1,7 @@
 package com.peppamy.ascentexp.block;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.PlantBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -23,6 +19,11 @@ public class CompassionPlantBlock extends PlantBlock {
 
     public CompassionPlantBlock(AbstractBlock.Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isOf(Blocks.CLAY) || super.canPlantOnTop(floor, world, pos);
     }
 
     @Override
