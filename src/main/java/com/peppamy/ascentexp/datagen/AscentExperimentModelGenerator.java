@@ -74,5 +74,7 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AscentExperimentItems.CHARTIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.CHARTIUM_HOE, Models.HANDHELD);
         itemModelGenerator.register(AscentExperimentItems.AEREMONE_BULB, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.LIFE_PATCH, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.SUPER_LIFE_PATCH, Models.GENERATED);
     }
 }

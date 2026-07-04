@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:blood_rutile_block"
+    },
+    "=": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    ",": {
+      "item": "minecraft:iron_nugget"
+    },
+    ".": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "pattern": [
+    " . ",
+    "=#=",
+    " , "
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:heart_badge"
+  }
+}

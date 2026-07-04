@@ -4,10 +4,12 @@ import com.peppamy.ascentexp.AscentExperiment;
 import com.peppamy.ascentexp.item.ArmorSettingsWithAttribute;
 import com.peppamy.ascentexp.item.AscentExperimentArmorMaterials;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -16,6 +18,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.math.Direction;
 
 public class AscentExperimentItems {
@@ -24,6 +27,7 @@ public class AscentExperimentItems {
         .saturationModifier(1.2F)
         .alwaysEdible()
         .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1), 1.0F)
+        .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 0), 1.0F)
         .build();
 
     public static final FoodComponent AERO_FOOD = new FoodComponent.Builder()
@@ -33,7 +37,24 @@ public class AscentExperimentItems {
         .statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 0), 1.0F)
         .build();
 
+    public static final FoodComponent HEAL_PH_1 = new FoodComponent.Builder()
+        .snack()
+        .alwaysEdible()
+        .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 8, 4), 1.0F)
+        .build();
+    public static final FoodComponent HEAL_PH_2 = new FoodComponent.Builder()
+        .alwaysEdible()
+        .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 5, 5), 1.0F)
+        .build();
+
+//    public void healEntity(LivingEntity living, float amount) {
+//        living.heal(amount);
+//    };
+
     public static final Item HEART_BADGE = register("heart_badge", new Item(new Item.Settings().maxCount(5)));
+//    public static final Item LIFE_PATCH = register("life_patch", new Item(new Item.Settings()));
+public static final Item LIFE_PATCH = register("life_patch", HEAL_PH_1);
+    public static final Item SUPER_LIFE_PATCH = register("super_life_patch", new Item(new Item.Settings().maxCount(16).rarity(Rarity.UNCOMMON).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true).food(HEAL_PH_2)));
     public static final Item SAPPHIRE = register("sapphire", new Item(new Item.Settings()));
     public static final Item SAPPHIRE_SWORD = register(
         "sapphire_sword",

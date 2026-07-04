@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "b": {
+      "item": "minecraft:beetroot"
+    },
+    "H": {
+      "item": "minecraft:honey_bottle"
+    }
+  },
+  "pattern": [
+    "###",
+    "bHb",
+    "###"
+  ],
+  "result": {
+    "count": 3,
+    "id": "ascent-experiment:life_patch"
+  }
+}

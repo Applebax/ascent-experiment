@@ -174,8 +174,24 @@ public class AscentExperiment implements ModInitializer {
 			if (key.equals(LootTables.NETHER_BRIDGE_CHEST)||(key.equals(LootTables.BASTION_HOGLIN_STABLE_CHEST)||(key.equals(LootTables.BASTION_OTHER_CHEST)))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.MYSTICK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 9)))));
 		});
 		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-			if (key.equals(LootTables.BASTION_TREASURE_CHEST)||(key.equals(LootTables.BASTION_OTHER_CHEST))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.MYSTICK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 3)))));
+			if (key.equals(LootTables.BASTION_TREASURE_CHEST)||(key.equals(LootTables.BASTION_OTHER_CHEST))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.COMPASSION_BOTTLE).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 3)))));
 		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.PILLAGER_OUTPOST_CHEST)||(key.equals(LootTables.ANCIENT_CITY_CHEST)||(key.equals(LootTables.WOODLAND_MANSION_CHEST)||(key.equals(LootTables.SIMPLE_DUNGEON_CHEST)||(key.equals(LootTables.JUNGLE_TEMPLE_CHEST)))))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.SUPER_LIFE_PATCH).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 3)))));
+		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.PILLAGER_OUTPOST_CHEST)||(key.equals(LootTables.WOODLAND_MANSION_CHEST)||(key.equals(LootTables.SIMPLE_DUNGEON_CHEST)||(key.equals(LootTables.JUNGLE_TEMPLE_CHEST))))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.LIFE_PATCH).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 9)))));
+		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.ANCIENT_CITY_CHEST)||(key.equals(LootTables.TRIAL_CHAMBERS_SUPPLY_CHEST))) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.LIFE_PATCH).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0, 5)))));
+		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.JUNGLE_TEMPLE_CHEST)) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.COMPASSION_FRUIT).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 9)))));
+		});
+		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+			if (key.equals(LootTables.BASTION_TREASURE_CHEST)) tableBuilder.pool(LootPool.builder().with(ItemEntry.builder(AscentExperimentItems.HEART_BADGE).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 2)))));
+		});
+
 				AscentExperimentArmorMaterials.initialize();
 	}
 

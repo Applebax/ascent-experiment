@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:life_patch"
+    },
+    ".": {
+      "item": "minecraft:ghast_tear"
+    }
+  },
+  "pattern": [
+    "###",
+    "...",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "ascent-experiment:super_life_patch"
+  }
+}

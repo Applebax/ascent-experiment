@@ -51,5 +51,7 @@
   "block.ascent-experiment.compassion_plant": "Compassion Plant",
   "block.ascent-experiment.compassion_leaves": "Compassion Leaves*",
   "block.ascent-experiment.fruiting_compassion_leaves": "Fruiting Compassion Leaves*",
-  "block.ascent-experiment.aeremone_bulb": "Aeremone Bulb*"
+  "block.ascent-experiment.aeremone_bulb": "Aeremone Bulb*",
+  "item.ascent-experiment.life_patch": "Life Patch",
+  "item.ascent-experiment.super_life_patch": "Super Life Patch"
 }

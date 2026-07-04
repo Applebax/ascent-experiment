@@ -10,6 +10,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -136,5 +137,14 @@ public class AscentExperimentRecipeGenerator extends FabricRecipeProvider {
             .pattern("# #")
             .input('#', AscentExperimentItems.BLOOD_RUTILE).criterion(RecipeProvider.hasItem(AscentExperimentItems.BLOOD_RUTILE), RecipeProvider.conditionsFromItem(AscentExperimentItems.BLOOD_RUTILE))
             .offerTo(exporter);
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.HEART_BADGE)
+//            .pattern(" . ")
+//            .pattern("=#=")
+//            .pattern(" , ")
+//            .input('#', AscentExperimentBlocks.BLOOD_RUTILE_BLOCK).criterion(RecipeProvider.hasItem(AscentExperimentBlocks.BLOOD_RUTILE_BLOCK), RecipeProvider.conditionsFromItem(AscentExperimentBlocks.BLOOD_RUTILE_BLOCK))
+//            .input('=', ItemTags.WOODEN_SLABS).criterion(RecipeProvider.hasItem(ItemTags.WOODEN_SLABS), RecipeProvider.conditionsFromItem(ItemTags.WOODEN_SLABS))
+//            .input(',', Items.IRON_NUGGET).criterion(RecipeProvider.hasItem(Items.IRON_NUGGET), RecipeProvider.conditionsFromItem(Items.IRON_NUGGET))
+//           .input('.', Items.GHAST_TEAR).criterion(RecipeProvider.hasItem(Items.GHAST_TEAR), RecipeProvider.conditionsFromItem(Items.GHAST_TEAR))
+//        .offerTo(exporter);
     }
 }

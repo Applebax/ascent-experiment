@@ -61,8 +61,10 @@ public class AscentExperimentTagGenerators {
         @Override
         protected void configure(RegistryWrapper.WrapperLookup lookup) {
             getOrCreateTagBuilder(AscentExperiment.REPAIRS_SAPPHIRE_ARMOR)
-                .add(AscentExperimentItems.SAPPHIRE)
-                .add(AscentExperimentItems.BLOOD_RUTILE)
+                .add(AscentExperimentItems.SAPPHIRE);
+            getOrCreateTagBuilder(AscentExperiment.REPAIRS_RUTILE_ARMOR)
+                .add(AscentExperimentItems.BLOOD_RUTILE);
+            getOrCreateTagBuilder(AscentExperiment.REPAIRS_CHARTIUM_ARMOR)
                 .add(AscentExperimentItems.CHARTIUM_INGOT);
 
             getOrCreateTagBuilder(ItemTags.AXES)
