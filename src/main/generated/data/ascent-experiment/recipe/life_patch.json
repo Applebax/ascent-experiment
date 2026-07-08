@@ -5,11 +5,11 @@
     "#": {
       "item": "minecraft:paper"
     },
-    "b": {
-      "item": "minecraft:beetroot"
-    },
     "H": {
-      "item": "minecraft:honey_bottle"
+      "tag": "c:drinks/honey"
+    },
+    "b": {
+      "tag": "c:crops/beetroot"
     }
   },
   "pattern": [

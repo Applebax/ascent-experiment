@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blood_rutile": {
+    "has_paper": {
       "conditions": {
         "items": [
           {
-            "items": "ascent-experiment:blood_rutile"
+            "items": "minecraft:paper"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ascent-experiment:blood_rutile_pickaxe"
+        "recipe": "ascent-experiment:super_life_patch"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blood_rutile"
+      "has_paper"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ascent-experiment:blood_rutile_pickaxe"
+      "ascent-experiment:super_life_patch"
     ]
   }
 }

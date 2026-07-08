@@ -5,14 +5,14 @@
     "#": {
       "item": "ascent-experiment:blood_rutile_block"
     },
-    "=": {
-      "tag": "minecraft:wooden_slabs"
-    },
     ",": {
       "item": "minecraft:iron_nugget"
     },
     ".": {
       "item": "minecraft:ghast_tear"
+    },
+    "=": {
+      "tag": "minecraft:wooden_slabs"
     }
   },
   "pattern": [

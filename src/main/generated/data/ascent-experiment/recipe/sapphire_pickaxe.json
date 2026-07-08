@@ -6,7 +6,7 @@
       "item": "ascent-experiment:sapphire"
     },
     "/": {
-      "item": "minecraft:stick"
+      "tag": "c:rods/wooden"
     }
   },
   "pattern": [
