@@ -3,8 +3,7 @@
   "package": "com.peppamy.ascentexp.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ArmorItemMixin",
-    "LivingEntityMixin"
+    "ArmorItemMixin", "CreeperEntity_AbstractSkeletonEntityMixin", "SpiderEntityMixin", "ZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
