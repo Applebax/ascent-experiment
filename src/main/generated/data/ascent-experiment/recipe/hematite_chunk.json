@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ascent-experiment:hematite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ascent-experiment:hematite_chunk"
+  }
+}

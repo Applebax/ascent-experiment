@@ -22,6 +22,8 @@ public class AscentExperimentBlockLootTableGenerator extends FabricBlockLootTabl
         addDrop(AscentExperimentBlocks.ASTER_STONE);
         addDrop(AscentExperimentBlocks.CHARTIUM_BRICKS);
         addDrop(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
+        addDrop(AscentExperimentBlocks.HEMATITE_BLOCK);
+        addDrop(AscentExperimentBlocks.COKE_BLOCK);
         this.addDrop(AscentExperimentBlocks.SAPPHIRE_ORE, block -> this.oreDrops(block, AscentExperimentItems.SAPPHIRE));
         this.addDrop(AscentExperimentBlocks.DEEPSLATE_SAPPHIRE_ORE, block -> this.oreDrops(block, AscentExperimentItems.SAPPHIRE));
         this.addDrop(AscentExperimentBlocks.BLACKSTONE_RUTILE_ORE, block -> this.oreDrops(block, AscentExperimentItems.BLOOD_RUTILE));
@@ -29,5 +31,9 @@ public class AscentExperimentBlockLootTableGenerator extends FabricBlockLootTabl
         this.addDrop(AscentExperimentBlocks.CHARTIUM_ORE, block -> this.oreDrops(block, AscentExperimentItems.RAW_CHARTIUM));
         this.addDrop(AscentExperimentBlocks.COMPASSION_PLANT, block -> this.drops(block, AscentExperimentItems.COMPASSION_FRUIT));
         this.addDrop(AscentExperimentBlocks.FRUITING_COMPASSION_LEAVES, block -> this.drops(block, AscentExperimentItems.COMPASSION_FRUIT));
+        this.addDrop(AscentExperimentBlocks.HEMATITE_ORE, block -> this.oreDrops(block, AscentExperimentItems.HEMATITE_CHUNK));
+        this.addDrop(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE, block -> this.oreDrops(block, AscentExperimentItems.HEMATITE_CHUNK));
+        this.addDrop(AscentExperimentBlocks.COKE_ORE, block -> this.oreDrops(block, AscentExperimentItems.COKE));
+        this.addDrop(AscentExperimentBlocks.BASALT_COKE_ORE, block -> this.oreDrops(block, AscentExperimentItems.COKE));
     }
 }

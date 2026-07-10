@@ -21,6 +21,11 @@ public class AscentExperimentTagGenerators {
 
         @Override
         protected void configure(RegistryWrapper.WrapperLookup lookup) {
+            getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(AscentExperimentBlocks.COKE_ORE)
+                .add(AscentExperimentBlocks.BASALT_COKE_ORE)
+                .add(AscentExperimentBlocks.COKE_BLOCK);
+
             getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                     .add(AscentExperimentBlocks.SAPPHIRE_BLOCK)
                     .add(AscentExperimentBlocks.SAPPHIRE_ORE)
@@ -32,7 +37,10 @@ public class AscentExperimentTagGenerators {
                     .add(AscentExperimentBlocks.CHARTIUM_ORE)
                     .add(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK)
                     .add(AscentExperimentBlocks.CHARTIUM_BLOCK)
-                    .add(AscentExperimentBlocks.CHARTIUM_BRICKS);
+                    .add(AscentExperimentBlocks.CHARTIUM_BRICKS)
+                .add(AscentExperimentBlocks.HEMATITE_ORE)
+                .add(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE)
+                .add(AscentExperimentBlocks.HEMATITE_BLOCK);
 
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                     .add(AscentExperimentBlocks.SAPPHIRE_BLOCK)
@@ -45,7 +53,13 @@ public class AscentExperimentTagGenerators {
                     .add(AscentExperimentBlocks.CHARTIUM_ORE)
                     .add(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK)
                     .add(AscentExperimentBlocks.CHARTIUM_BLOCK)
-                    .add(AscentExperimentBlocks.CHARTIUM_BRICKS);
+                    .add(AscentExperimentBlocks.CHARTIUM_BRICKS)
+                .add(AscentExperimentBlocks.HEMATITE_ORE)
+                .add(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE)
+                .add(AscentExperimentBlocks.HEMATITE_BLOCK)
+                .add(AscentExperimentBlocks.COKE_ORE)
+                .add(AscentExperimentBlocks.BASALT_COKE_ORE)
+                .add(AscentExperimentBlocks.COKE_BLOCK);
 
             getOrCreateTagBuilder(AscentExperiment.CHARTIUM_TORCHES)
                 .add(AscentExperimentBlocks.CHARTIUM_TORCH, AscentExperimentBlocks.CHARTIUM_WALL_TORCH);

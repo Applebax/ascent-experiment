@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ascent-experiment:hematite_chunk"
+    },
+    {
+      "item": "ascent-experiment:coke"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:hematite_catalyst"
+  }
+}

@@ -12,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static net.minecraft.block.Blocks.createLeavesBlock;
@@ -160,6 +161,53 @@ public class AscentExperimentBlocks {
                               .pistonBehavior(PistonBehavior.DESTROY)
                               .dropsLike(CHARTIUM_TORCH)
     ), false);
+
+    public static final Block HEMATITE_ORE = register("hematite_ore", new ExperienceDroppingBlock(
+        ConstantIntProvider.create(0),
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.STONE_GRAY)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(3.75F, 3.5F)
+    ), true);
+    public static final Block DEEPSLATE_HEMATITE_ORE = register("deepslate_hematite_ore", new ExperienceDroppingBlock(
+        ConstantIntProvider.create(0),
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.DEEPSLATE_GRAY)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(4.5F, 3.5F)
+    ), true);
+    public static final Block HEMATITE_BLOCK = register("hematite_block", new Block(
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.TERRACOTTA_BLACK)
+            .requiresTool()
+            .strength(4.5F, 6.0F)
+            .sounds(BlockSoundGroup.METAL)
+    ), true);
+
+    public static final Block COKE_ORE = register("coke_ore", new ExperienceDroppingBlock(
+        UniformIntProvider.create(2, 5),
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.STONE_GRAY)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(3.0F, 3.0F)
+    ), true);
+    public static final Block BASALT_COKE_ORE = register("basalt_coke_ore", new ExperienceDroppingBlock(
+        UniformIntProvider.create(2, 5),
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.STONE_GRAY)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(2.5F, 4.5F)
+    ), true);
+    public static final Block COKE_BLOCK = register("coke_block", new Block(
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.DEEPSLATE_GRAY)
+            .requiresTool()
+            .strength(4.5F, 6.0F)
+    ), true);
 
     public static <T extends Block> T register(String name, T block, boolean hasDefaultItem) {
         Identifier id = AscentExperiment.id(name);

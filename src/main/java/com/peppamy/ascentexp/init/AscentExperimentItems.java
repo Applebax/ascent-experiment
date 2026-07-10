@@ -278,6 +278,10 @@ public static final Item LIFE_PATCH = register("life_patch", HEAL_PH_1);
             AscentExperimentBlocks.CHARTIUM_TORCH, AscentExperimentBlocks.CHARTIUM_WALL_TORCH, new Item.Settings(),
             Direction.DOWN));
 
+    public static final Item HEMATITE_CHUNK = register("hematite_chunk", new Item(new Item.Settings()));
+    public static final Item COKE = register("coke", new Item(new Item.Settings()));
+    public static final Item HEMATITE_CATALYST = register("hematite_catalyst", new Item(new Item.Settings()));
+
     public static final ItemGroup ASCENT_EXPERIMENT_GROUP = FabricItemGroup.builder()
             .icon(CHARTIUM_TORCH_ITEM::getDefaultStack)
             .displayName(Text.translatable("itemGroup.ascent-experiment"))

@@ -27,6 +27,12 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.HEMATITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.HEMATITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.COKE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BASALT_COKE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.COKE_BLOCK);
 
         blockStateModelGenerator.registerTintableCross(AscentExperimentBlocks.COMPASSION_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.COMPASSION_LEAVES);
@@ -76,5 +82,8 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(AscentExperimentItems.AEREMONE_BULB, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.LIFE_PATCH, Models.GENERATED);
         itemModelGenerator.register(AscentExperimentItems.SUPER_LIFE_PATCH, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.HEMATITE_CHUNK, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.COKE, Models.GENERATED);
+        itemModelGenerator.register(AscentExperimentItems.HEMATITE_CATALYST, Models.GENERATED);
     }
 }

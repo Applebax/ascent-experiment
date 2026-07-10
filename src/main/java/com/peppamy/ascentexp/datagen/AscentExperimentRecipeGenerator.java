@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -212,5 +213,17 @@ public class AscentExperimentRecipeGenerator extends FabricRecipeProvider {
                                .criterion(RecipeProvider.hasItem(Items.PAPER),
                                           RecipeProvider.conditionsFromItem(Items.PAPER))
                                .offerTo(exporter);
+        RecipeProvider.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AscentExperimentItems.HEMATITE_CHUNK,
+            RecipeCategory.BUILDING_BLOCKS,
+            AscentExperimentBlocks.HEMATITE_BLOCK);
+        RecipeProvider.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AscentExperimentItems.COKE,
+            RecipeCategory.BUILDING_BLOCKS,
+            AscentExperimentBlocks.COKE_BLOCK);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.HEMATITE_CATALYST)
+            .input(AscentExperimentItems.HEMATITE_CHUNK)
+            .input(AscentExperimentItems.COKE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.HEMATITE_CHUNK),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.HEMATITE_CHUNK))
+            .offerTo(exporter);
     }
 }

@@ -10,6 +10,9 @@
     "ascent-experiment:chartium_ore",
     "ascent-experiment:raw_chartium_block",
     "ascent-experiment:chartium_block",
-    "ascent-experiment:chartium_bricks"
+    "ascent-experiment:chartium_bricks",
+    "ascent-experiment:hematite_ore",
+    "ascent-experiment:deepslate_hematite_ore",
+    "ascent-experiment:hematite_block"
   ]
 }

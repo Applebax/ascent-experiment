@@ -23,6 +23,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
@@ -152,6 +153,10 @@ public class AscentExperiment implements ModInitializer {
 	public static final RegistryKey<PlacedFeature> ORE_SAPPHIRE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, id("ore_sapphire"));
 	public static final RegistryKey<PlacedFeature> ORE_BLACKSTONE_RUTILE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_blackstone_rutile"));
 	public static final RegistryKey<PlacedFeature> ORE_BASALT_RUTILE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_basalt_rutile"));
+	public static final RegistryKey<PlacedFeature> ORE_HEMATITE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_hematite"));
+	public static final RegistryKey<PlacedFeature> ORE_HEMATITE_MOUNTAIN_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_hematite_mountain"));
+	public static final RegistryKey<PlacedFeature> ORE_COKE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_coke"));
+	public static final RegistryKey<PlacedFeature> ORE_BASALT_COKE_PLACED_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "ore_basalt_coke"));
 //	public static final RegistryKey<PlacedFeature> WILD_COMPASSION_PLANT_FEATURE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MOD_ID, "wild_compassion_plant"));
 
 	@Override
@@ -167,6 +172,10 @@ public class AscentExperiment implements ModInitializer {
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), GenerationStep.Feature.UNDERGROUND_ORES, ORE_SAPPHIRE_PLACED_FEATURE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_BLACKSTONE_RUTILE_PLACED_FEATURE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_BASALT_RUTILE_PLACED_FEATURE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), GenerationStep.Feature.UNDERGROUND_ORES, ORE_HEMATITE_PLACED_FEATURE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_ORES, ORE_HEMATITE_MOUNTAIN_PLACED_FEATURE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_COKE_PLACED_FEATURE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_DECORATION, ORE_BASALT_COKE_PLACED_FEATURE);
 //		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, WILD_COMPASSION_PLANT_FEATURE);
 //		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.LUSH_CAVES), GenerationStep.Feature.TOP_LAYER_MODIFICATION, WILD_COMPASSION_PLANT_FEATURE);
 
