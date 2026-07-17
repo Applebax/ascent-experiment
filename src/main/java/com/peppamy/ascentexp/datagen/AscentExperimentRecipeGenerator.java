@@ -219,11 +219,19 @@ public class AscentExperimentRecipeGenerator extends FabricRecipeProvider {
         RecipeProvider.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AscentExperimentItems.COKE,
             RecipeCategory.BUILDING_BLOCKS,
             AscentExperimentBlocks.COKE_BLOCK);
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.HEMATITE_CATALYST)
-            .input(AscentExperimentItems.HEMATITE_CHUNK)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.HEMATITE_CATALYST, 4)
+            .input(AscentExperimentItems.HEMATITE_CHUNK, 4)
             .input(AscentExperimentItems.COKE)
             .criterion(RecipeProvider.hasItem(AscentExperimentItems.HEMATITE_CHUNK),
                 RecipeProvider.conditionsFromItem(AscentExperimentItems.HEMATITE_CHUNK))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.TORCH, 8)
+            .pattern("#")
+            .pattern("/")
+            .input('#', AscentExperimentItems.COKE)
+            .input('/', ConventionalItemTags.WOODEN_RODS)
+            .criterion(RecipeProvider.hasItem(Items.PAPER),
+                RecipeProvider.conditionsFromItem(Items.PAPER))
             .offerTo(exporter);
     }
 }
