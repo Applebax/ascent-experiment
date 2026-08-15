@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ascent-experiment:block/chartium_bricks",
+    "side": "ascent-experiment:block/chartium_bricks",
+    "top": "ascent-experiment:block/chartium_bricks"
+  }
+}

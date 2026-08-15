@@ -106,6 +106,40 @@ public class AscentExperimentBlocks {
                               .requiresTool()
                               .strength(5.0F, 5.0F)
     ), true);
+    public static final Block POLISHED_ASTER_STONE = register("polished_aster_stone", new Block(
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.TERRACOTTA_BLACK)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(3.85F, 5.0F)
+    ), true);
+    public static final Block POLISHED_ASTER_STONE_STAIRS = register(
+        "polished_aster_stone_stairs", new StairsBlock(POLISHED_ASTER_STONE.getDefaultState(), AbstractBlock.Settings.copyShallow(POLISHED_ASTER_STONE))
+        , true);
+    public static final Block POLISHED_ASTER_STONE_SLAB = register("polished_aster_stone_slab", new SlabBlock(AbstractBlock.Settings.copyShallow(POLISHED_ASTER_STONE)), true);
+    public static final Block ASTER_STONE_BRICKS = register("aster_stone_bricks", new Block(
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.TERRACOTTA_BLACK)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(3.85F, 5.0F)
+    ), true);
+    public static final Block ASTER_STONE_BRICK_STAIRS = register(
+        "aster_stone_brick_stairs", new StairsBlock(ASTER_STONE_BRICKS.getDefaultState(), AbstractBlock.Settings.copyShallow(ASTER_STONE_BRICKS))
+        , true);
+    public static final Block ASTER_STONE_BRICK_SLAB = register("aster_stone_brick_slab", new SlabBlock(AbstractBlock.Settings.copyShallow(ASTER_STONE_BRICKS)), true);
+    public static final Block ASTER_STONE_BRICK_WALL = register("aster_stone_brick_wall", new WallBlock(AbstractBlock.Settings.copyShallow(ASTER_STONE_BRICKS).solid()), true);
+    public static final Block CHISELED_ASTER_STONE = register("chiseled_aster_stone", new Block(
+        AbstractBlock.Settings.create()
+            .mapColor(MapColor.TERRACOTTA_BLACK)
+            .sounds(BlockSoundGroup.STONE)
+            .requiresTool()
+            .strength(3.85F, 5.0F)
+    ), true);
+    public static final Block ASTER_PILLAR = register(
+        "aster_pillar",
+        new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.TERRACOTTA_BLACK).requiresTool().strength(3.85F, 5.0F))
+    , true);
     public static final Block CHARTIUM_ORE = register("chartium_ore", new ExperienceDroppingBlock(
         UniformIntProvider.create(4, 8),
         AbstractBlock.Settings.create()
@@ -127,6 +161,10 @@ public class AscentExperimentBlocks {
                               .strength(5.0F, 6.0F)
                               .sounds(BlockSoundGroup.METAL)
     ), true);
+    public static final Block CHARTIUM_BRICK_STAIRS = register(
+        "chartium_brick_stairs", new StairsBlock(CHARTIUM_BRICKS.getDefaultState(), AbstractBlock.Settings.copyShallow(CHARTIUM_BRICKS))
+    , true);
+    public static final Block CHARTIUM_BRICK_SLAB = register("chartium_brick_slab", new SlabBlock(AbstractBlock.Settings.copyShallow(CHARTIUM_BRICKS)), true);
     public static final Block RAW_CHARTIUM_BLOCK = register("raw_chartium_block", new Block(
         AbstractBlock.Settings.create()
                               .mapColor(MapColor.LIME)

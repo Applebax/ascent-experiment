@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ascent-experiment:block/aster_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ascent-experiment:block/aster_pillar"
+    },
+    "axis=z": {
+      "model": "ascent-experiment:block/aster_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -20,7 +20,18 @@ public class AscentExperimentBlockLootTableGenerator extends FabricBlockLootTabl
         addDrop(AscentExperimentBlocks.BLOOD_RUTILE_BLOCK);
         addDrop(AscentExperimentBlocks.CHARTIUM_BLOCK);
         addDrop(AscentExperimentBlocks.ASTER_STONE);
+        addDrop(AscentExperimentBlocks.POLISHED_ASTER_STONE);
+        addDrop(AscentExperimentBlocks.POLISHED_ASTER_STONE_STAIRS);
+        addDrop(AscentExperimentBlocks.POLISHED_ASTER_STONE_SLAB);
+        addDrop(AscentExperimentBlocks.ASTER_STONE_BRICKS);
+        addDrop(AscentExperimentBlocks.ASTER_STONE_BRICK_STAIRS);
+        addDrop(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB);
+        addDrop(AscentExperimentBlocks.ASTER_STONE_BRICK_WALL);
+        addDrop(AscentExperimentBlocks.CHISELED_ASTER_STONE);
+        addDrop(AscentExperimentBlocks.ASTER_PILLAR);
         addDrop(AscentExperimentBlocks.CHARTIUM_BRICKS);
+        addDrop(AscentExperimentBlocks.CHARTIUM_BRICK_STAIRS);
+        addDrop(AscentExperimentBlocks.CHARTIUM_BRICK_SLAB);
         addDrop(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
         addDrop(AscentExperimentBlocks.HEMATITE_BLOCK);
         addDrop(AscentExperimentBlocks.COKE_BLOCK);

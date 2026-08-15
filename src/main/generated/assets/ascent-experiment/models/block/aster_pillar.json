@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ascent-experiment:block/aster_pillar_top",
+    "side": "ascent-experiment:block/aster_pillar"
+  }
+}

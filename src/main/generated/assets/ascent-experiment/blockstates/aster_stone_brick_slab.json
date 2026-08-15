@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ascent-experiment:block/aster_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "ascent-experiment:block/aster_stone_bricks"
+    },
+    "type=top": {
+      "model": "ascent-experiment:block/aster_stone_brick_slab_top"
+    }
+  }
+}

@@ -40,7 +40,16 @@ public class AscentExperimentTagGenerators {
                     .add(AscentExperimentBlocks.CHARTIUM_BRICKS)
                 .add(AscentExperimentBlocks.HEMATITE_ORE)
                 .add(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE)
-                .add(AscentExperimentBlocks.HEMATITE_BLOCK);
+                .add(AscentExperimentBlocks.HEMATITE_BLOCK)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE_STAIRS)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE_SLAB)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICKS)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_STAIRS)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_WALL)
+                .add(AscentExperimentBlocks.CHISELED_ASTER_STONE)
+                .add(AscentExperimentBlocks.ASTER_PILLAR);
 
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                     .add(AscentExperimentBlocks.SAPPHIRE_BLOCK)
@@ -59,7 +68,19 @@ public class AscentExperimentTagGenerators {
                 .add(AscentExperimentBlocks.HEMATITE_BLOCK)
                 .add(AscentExperimentBlocks.COKE_ORE)
                 .add(AscentExperimentBlocks.BASALT_COKE_ORE)
-                .add(AscentExperimentBlocks.COKE_BLOCK);
+                .add(AscentExperimentBlocks.COKE_BLOCK)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE_STAIRS)
+                .add(AscentExperimentBlocks.POLISHED_ASTER_STONE_SLAB)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICKS)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_STAIRS)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_WALL)
+                .add(AscentExperimentBlocks.CHISELED_ASTER_STONE)
+                .add(AscentExperimentBlocks.ASTER_PILLAR);
+
+            getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(AscentExperimentBlocks.ASTER_STONE_BRICK_WALL);
 
             getOrCreateTagBuilder(AscentExperiment.CHARTIUM_TORCHES)
                 .add(AscentExperimentBlocks.CHARTIUM_TORCH, AscentExperimentBlocks.CHARTIUM_WALL_TORCH);

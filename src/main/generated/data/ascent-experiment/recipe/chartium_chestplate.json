@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:chartium_ingot"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:chartium_chestplate"
+  }
+}

@@ -181,6 +181,175 @@ public class AscentExperimentRecipeGenerator extends FabricRecipeProvider {
                                .criterion(RecipeProvider.hasItem(AscentExperimentItems.BLOOD_RUTILE),
                                           RecipeProvider.conditionsFromItem(AscentExperimentItems.BLOOD_RUTILE))
                                .offerTo(exporter);
+        RecipeProvider.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AscentExperimentItems.RAW_CHARTIUM,
+            RecipeCategory.BUILDING_BLOCKS,
+            AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
+        RecipeProvider.offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_INGOT,
+            RecipeCategory.BUILDING_BLOCKS,
+            AscentExperimentBlocks.CHARTIUM_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_SWORD)
+            .pattern("#")
+            .pattern("#")
+            .pattern("/")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .input('/', AscentExperimentItems.MYSTICK)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_PICKAXE)
+            .pattern("###")
+            .pattern(" / ")
+            .pattern(" / ")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .input('/', AscentExperimentItems.MYSTICK)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_AXE)
+            .pattern("##")
+            .pattern("#/")
+            .pattern(" /")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .input('/', AscentExperimentItems.MYSTICK)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_SHOVEL)
+            .pattern("#")
+            .pattern("/")
+            .pattern("/")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .input('/', AscentExperimentItems.MYSTICK)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_HOE)
+            .pattern("##")
+            .pattern(" /")
+            .pattern(" /")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .input('/', AscentExperimentItems.MYSTICK)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_HELMET)
+            .pattern("###")
+            .pattern("# #")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_CHESTPLATE)
+            .pattern("# #")
+            .pattern("###")
+            .pattern("###")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_LEGGINGS)
+            .pattern("###")
+            .pattern("# #")
+            .pattern("# #")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.CHARTIUM_BOOTS)
+            .pattern("# #")
+            .pattern("# #")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.CHARTIUM_BRICKS)
+            .pattern("##")
+            .pattern("##")
+            .input('#', AscentExperimentItems.CHARTIUM_INGOT)
+            .criterion(RecipeProvider.hasItem(AscentExperimentItems.CHARTIUM_INGOT),
+                RecipeProvider.conditionsFromItem(AscentExperimentItems.CHARTIUM_INGOT))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.CHARTIUM_BRICK_STAIRS, 8)
+            .pattern("#  ")
+            .pattern("## ")
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.CHARTIUM_BRICKS)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.CHARTIUM_BRICKS),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.CHARTIUM_BRICKS))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.CHARTIUM_BRICK_SLAB, 6)
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.CHARTIUM_BRICKS)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.CHARTIUM_BRICKS),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.CHARTIUM_BRICKS))
+            .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.POLISHED_ASTER_STONE, 4)
+            .pattern("##")
+            .pattern("##")
+            .input('#', AscentExperimentBlocks.ASTER_STONE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.ASTER_STONE),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.ASTER_STONE))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.POLISHED_ASTER_STONE_STAIRS, 8)
+            .pattern("#  ")
+            .pattern("## ")
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.POLISHED_ASTER_STONE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.POLISHED_ASTER_STONE),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.POLISHED_ASTER_STONE))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.POLISHED_ASTER_STONE_SLAB, 6)
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.POLISHED_ASTER_STONE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.POLISHED_ASTER_STONE),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.POLISHED_ASTER_STONE))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.ASTER_STONE_BRICKS, 4)
+            .pattern("##")
+            .pattern("##")
+            .input('#', AscentExperimentBlocks.POLISHED_ASTER_STONE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.POLISHED_ASTER_STONE),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.POLISHED_ASTER_STONE))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.ASTER_STONE_BRICK_STAIRS, 8)
+            .pattern("#  ")
+            .pattern("## ")
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.ASTER_STONE_BRICKS)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.ASTER_STONE_BRICKS),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.ASTER_STONE_BRICKS))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB, 6)
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.ASTER_STONE_BRICKS)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.ASTER_STONE_BRICKS),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.ASTER_STONE_BRICKS))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.ASTER_STONE_BRICK_WALL, 6)
+            .pattern("###")
+            .pattern("###")
+            .input('#', AscentExperimentBlocks.ASTER_STONE_BRICKS)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.ASTER_STONE_BRICKS),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.ASTER_STONE_BRICKS))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.CHISELED_ASTER_STONE)
+            .pattern("#")
+            .pattern("#")
+            .input('#', AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB))
+            .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentBlocks.ASTER_PILLAR, 2)
+            .pattern("#")
+            .pattern("#")
+            .input('#', AscentExperimentBlocks.POLISHED_ASTER_STONE)
+            .criterion(RecipeProvider.hasItem(AscentExperimentBlocks.POLISHED_ASTER_STONE),
+                RecipeProvider.conditionsFromItem(AscentExperimentBlocks.POLISHED_ASTER_STONE))
+            .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AscentExperimentItems.HEART_BADGE)
                                .pattern(" . ")
                                .pattern("=#=")

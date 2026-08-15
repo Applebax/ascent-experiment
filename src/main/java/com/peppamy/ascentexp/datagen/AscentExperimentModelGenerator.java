@@ -4,9 +4,12 @@ import com.peppamy.ascentexp.init.AscentExperimentBlocks;
 import com.peppamy.ascentexp.init.AscentExperimentItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
+import net.minecraft.data.family.BlockFamily;
 
 public class AscentExperimentModelGenerator extends FabricModelProvider {
 
@@ -23,10 +26,27 @@ public class AscentExperimentModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BASALT_RUTILE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.BLOOD_RUTILE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.ASTER_STONE);
+        BlockFamily polishedAsterStone = new BlockFamily.Builder(AscentExperimentBlocks.POLISHED_ASTER_STONE)
+            .slab(AscentExperimentBlocks.POLISHED_ASTER_STONE_SLAB)
+            .stairs(AscentExperimentBlocks.POLISHED_ASTER_STONE_STAIRS)
+            .build();
+        blockStateModelGenerator.registerCubeAllModelTexturePool(polishedAsterStone.getBaseBlock()).family(polishedAsterStone);
+        BlockFamily asterStoneBricks = new BlockFamily.Builder(AscentExperimentBlocks.ASTER_STONE_BRICKS)
+            .slab(AscentExperimentBlocks.ASTER_STONE_BRICK_SLAB)
+            .stairs(AscentExperimentBlocks.ASTER_STONE_BRICK_STAIRS)
+            .wall(AscentExperimentBlocks.ASTER_STONE_BRICK_WALL)
+            .build();
+        blockStateModelGenerator.registerCubeAllModelTexturePool(asterStoneBricks.getBaseBlock()).family(asterStoneBricks);
+        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHISELED_ASTER_STONE);
+        blockStateModelGenerator.registerAxisRotated(AscentExperimentBlocks.ASTER_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.RAW_CHARTIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.CHARTIUM_BRICKS);
+        BlockFamily chartiumBricks = new BlockFamily.Builder(AscentExperimentBlocks.CHARTIUM_BRICKS)
+            .slab(AscentExperimentBlocks.CHARTIUM_BRICK_SLAB)
+            .stairs(AscentExperimentBlocks.CHARTIUM_BRICK_STAIRS)
+            .build();
+        blockStateModelGenerator.registerCubeAllModelTexturePool(chartiumBricks.getBaseBlock()).family(chartiumBricks);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.HEMATITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.DEEPSLATE_HEMATITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(AscentExperimentBlocks.HEMATITE_BLOCK);

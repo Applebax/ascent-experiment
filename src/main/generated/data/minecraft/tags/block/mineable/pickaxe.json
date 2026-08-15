@@ -16,6 +16,15 @@
     "ascent-experiment:hematite_block",
     "ascent-experiment:coke_ore",
     "ascent-experiment:basalt_coke_ore",
-    "ascent-experiment:coke_block"
+    "ascent-experiment:coke_block",
+    "ascent-experiment:polished_aster_stone",
+    "ascent-experiment:polished_aster_stone_stairs",
+    "ascent-experiment:polished_aster_stone_slab",
+    "ascent-experiment:aster_stone_bricks",
+    "ascent-experiment:aster_stone_brick_stairs",
+    "ascent-experiment:aster_stone_brick_slab",
+    "ascent-experiment:aster_stone_brick_wall",
+    "ascent-experiment:chiseled_aster_stone",
+    "ascent-experiment:aster_pillar"
   ]
 }

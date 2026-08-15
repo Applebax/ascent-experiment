@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "chartium_ingot",
+  "ingredient": {
+    "item": "ascent-experiment:raw_chartium"
+  },
+  "result": {
+    "id": "ascent-experiment:chartium_ingot"
+  }
+}

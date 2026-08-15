@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ascent-experiment:chartium_ingot"
+    },
+    "/": {
+      "item": "ascent-experiment:mystick"
+    }
+  },
+  "pattern": [
+    "##",
+    "#/",
+    " /"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ascent-experiment:chartium_axe"
+  }
+}

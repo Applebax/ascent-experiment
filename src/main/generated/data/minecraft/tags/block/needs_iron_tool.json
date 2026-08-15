@@ -13,6 +13,15 @@
     "ascent-experiment:chartium_bricks",
     "ascent-experiment:hematite_ore",
     "ascent-experiment:deepslate_hematite_ore",
-    "ascent-experiment:hematite_block"
+    "ascent-experiment:hematite_block",
+    "ascent-experiment:polished_aster_stone",
+    "ascent-experiment:polished_aster_stone_stairs",
+    "ascent-experiment:polished_aster_stone_slab",
+    "ascent-experiment:aster_stone_bricks",
+    "ascent-experiment:aster_stone_brick_stairs",
+    "ascent-experiment:aster_stone_brick_slab",
+    "ascent-experiment:aster_stone_brick_wall",
+    "ascent-experiment:chiseled_aster_stone",
+    "ascent-experiment:aster_pillar"
   ]
 }
